@@ -1,0 +1,56 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Test the Feature",
+        "description": "",
+        "id": "test-the-bdd-framework;test-the-feature",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 120675600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user clicks the application",
+            "match": {
+              "location": "StepDefinitions.testApp()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2150100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user enters \"uname\" and \"pwd\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "uname",
+                  "offset": 13
+                },
+                {
+                  "val": "pwd",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinitions.inputLogin(String,String)"
+            },
+            "keyword": "When "
+          }
+        ]
+      }
+    ],
+    "name": "Test the BDD framework",
+    "description": "",
+    "id": "test-the-bdd-framework",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Feature/AppStart.feature"
+  }
+]
