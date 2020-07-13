@@ -3,44 +3,67 @@
     "line": 1,
     "elements": [
       {
+        "before": [
+          {
+            "result": {
+              "duration": 9261600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberHooks.initialize(Scenario)"
+            }
+          }
+        ],
         "line": 4,
         "name": "Test the Feature",
         "description": "",
         "id": "test-the-bdd-framework;test-the-feature",
+        "after": [
+          {
+            "result": {
+              "duration": 561497400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CucumberHooks.closefun(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 120675600,
+              "duration": 7790114000,
               "status": "passed"
             },
-            "line": 6,
-            "name": "user clicks the application",
+            "comments": [
+              {
+                "line": 6,
+                "value": "#Given user clicks the application"
+              },
+              {
+                "line": 7,
+                "value": "#When user enters \"uname\" and \"pwd\""
+              }
+            ],
+            "line": 8,
+            "name": "Open the Browser",
             "match": {
-              "location": "StepDefinitions.testApp()"
+              "location": "StepDefinitions.open_the_browser()"
             },
-            "keyword": "Given "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 2150100,
-              "status": "passed"
+              "duration": 286844100,
+              "error_message": "java.lang.Exception\r\n\tat io.cucumber.cucumber_archetype.StepDefinitions.entertheValuesinSB(StepDefinitions.java:50)\r\n\tat ✽.When Users Enters the Value(src/test/resources/Feature/AppStart.feature:9)\r\n",
+              "status": "failed"
             },
-            "line": 7,
-            "name": "user enters \"uname\" and \"pwd\"",
+            "line": 9,
+            "name": "Users Enters the Value",
             "match": {
-              "arguments": [
-                {
-                  "val": "uname",
-                  "offset": 13
-                },
-                {
-                  "val": "pwd",
-                  "offset": 25
-                }
-              ],
-              "location": "StepDefinitions.inputLogin(String,String)"
+              "location": "StepDefinitions.entertheValuesinSB()"
             },
             "keyword": "When "
           }

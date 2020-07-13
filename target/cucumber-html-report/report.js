@@ -6,6 +6,10 @@ formatter.feature({
   "id": "test-the-bdd-framework",
   "keyword": "Feature"
 });
+formatter.before({
+  "duration": 9261600,
+  "status": "passed"
+});
 formatter.scenario({
   "line": 4,
   "name": "Test the Feature",
@@ -15,37 +19,42 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 6,
-  "name": "user clicks the application",
-  "keyword": "Given "
+  "comments": [
+    {
+      "line": 6,
+      "value": "#Given user clicks the application"
+    },
+    {
+      "line": 7,
+      "value": "#When user enters \"uname\" and \"pwd\""
+    }
+  ],
+  "line": 8,
+  "name": "Open the Browser",
+  "keyword": "When "
 });
 formatter.step({
-  "line": 7,
-  "name": "user enters \"uname\" and \"pwd\"",
+  "line": 9,
+  "name": "Users Enters the Value",
   "keyword": "When "
 });
 formatter.match({
-  "location": "StepDefinitions.testApp()"
+  "location": "StepDefinitions.open_the_browser()"
 });
 formatter.result({
-  "duration": 120675600,
+  "duration": 7790114000,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "uname",
-      "offset": 13
-    },
-    {
-      "val": "pwd",
-      "offset": 25
-    }
-  ],
-  "location": "StepDefinitions.inputLogin(String,String)"
+  "location": "StepDefinitions.entertheValuesinSB()"
 });
 formatter.result({
-  "duration": 2150100,
+  "duration": 286844100,
+  "error_message": "java.lang.Exception\r\n\tat io.cucumber.cucumber_archetype.StepDefinitions.entertheValuesinSB(StepDefinitions.java:50)\r\n\tat ✽.When Users Enters the Value(src/test/resources/Feature/AppStart.feature:9)\r\n",
+  "status": "failed"
+});
+formatter.after({
+  "duration": 561497400,
   "status": "passed"
 });
 });
